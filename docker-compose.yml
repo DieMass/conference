@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "8085:8085"
+  app:
+    container_name: conference
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    links:
+      - h2
+  h2:
+    image: oscarfonts/h2
+    container_name: conferencedb
+    restart: always

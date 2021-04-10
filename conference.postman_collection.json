@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "6ea8ec23-c4db-4ef8-b9ed-6664fbe86a31",
+		"name": "conference",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"admin1@gmail.com\",\n    \"password\" : \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conference/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"conferenceId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/conference/register",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"conference",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talks/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"\",\n\"description\" : \"\",\n\"beginTime\" : \"2021-04-07T18:00:00Z\",\n\"endTime\" : \"2021-04-07T19:00:00Z\",\n\"conferenceId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/talks/create",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"talks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talks/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"\",\n\"description\" : \"\",\n\"beginTime\" : \"2021-04-07T18:00:00Z\",\n\"endTime\" : \"2021-04-07T19:00:00Z\",\n\"conferenceId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/talks/create",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"talks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talks/setTime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"\",\n\"description\" : \"\",\n\"beginTime\" : \"2021-04-07T18:00:00Z\",\n\"endTime\" : \"2021-04-07T19:00:00Z\",\n\"conferenceId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/talks/create",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"talks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "talks/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"\",\n\"description\" : \"\",\n\"beginTime\" : \"2021-04-07T18:00:00Z\",\n\"endTime\" : \"2021-04-07T19:00:00Z\",\n\"conferenceId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/talks/create",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"talks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conference/talks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "speaker/talks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/speaker/turnIntoSpeaker",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{adminAuth}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/speaker/turnIntoSpeaker",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"speaker",
+						"turnIntoSpeaker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/update",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{adminAuth}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 4,\n    \"email\" : \"listener1@gmail.com\",\n    \"role\" : \"ADMIN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/users/update",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/update Copy",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{adminAuth}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/users/all",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwibmFtZSI6Imxpc3RlbmVyMUBnbWFpbC5jb20iLCJyb2xlIjoiTElTVEVORVIifQ.NEGmaKbmKYAWdvVAPmFM-zdRijktfxe1b-dMz-ELVV0",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root",
+			"value": "http://localhost:8085"
+		},
+		{
+			"key": "listenerAuth",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwibmFtZSI6Imxpc3RlbmVyMUBnbWFpbC5jb20iLCJyb2xlIjoiTElTVEVORVIifQ.NEGmaKbmKYAWdvVAPmFM-zdRijktfxe1b-dMz-ELVV0"
+		},
+		{
+			"key": "speakerAuth",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwibmFtZSI6InNwZWFrZXIxQGdtYWlsLmNvbSIsInJvbGUiOiJTUEVBS0VSIn0.QSu5M4rJiDr-1rKlLhNCoL6BpCiWieOI37qrhmPhmhs"
+		},
+		{
+			"key": "adminAuth",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwibmFtZSI6ImFkbWluMUBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4ifQ.xhiW6kTYOLewI00nU8ClV34QAu1fQNUj7NbC-8cZlXQ"
+		}
+	]
+}
